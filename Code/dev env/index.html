@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Password Generator</h1>
+      </header>
+      <div class="card">
+        <div class="card-header">
+          <h2>Generate a Password</h2>
+        </div>
+        <div class="card-body">
+          <textarea
+            readonly
+            id="password"
+            placeholder="Your Secure Password"
+            aria-label="Generated Password"
+          ></textarea>
+        </div>
+        <div class="card-footer">
+          <label for="AllowNumbers">Add Numbers</label>
+          <input type="checkbox" id="AllowNumbers" value="Allow Numbers">
+          <label for="AllowSymbols">Add Symbols</label>
+          <input type="checkbox" id="AllowSymbols" value="Allow Symbols">
+          <label for="AllowLowercaseLetters">Add Lowercase Letters</label>
+          <input type="checkbox" id="AllowLowercaseLetters" value="Allow Lowercase Letters">
+          <label for="AllowUpercaseLetters">Add Uppercase Letters</label>
+          <input type="checkbox" id="AllowUpercaseLetters" value="Allow Upercase Letters">
+          <label for="user-input">Password length (8-127)</label>
+          <input id="user-input" type="range" min="8" max="127" step="whole numbers" />
+          <p><output id="value">20</output></p>
+          <button id="generate" class="btn1">Generate Password</button>
+          <button id="generate" class="btn1" onclick="copyPassword()">Copy</button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
