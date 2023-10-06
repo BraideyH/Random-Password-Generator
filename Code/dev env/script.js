@@ -18,6 +18,12 @@ generateBtn.addEventListener("click", writePassword)
 // Write password to the #password input
 function writePassword() {
   console.log(document.querySelector("#AllowNumbers").checked)
+  var numbersEL = (document.getElementById("#AllowNumbers").checked)
+  var includeNumbers = numbersEL.checked;
+  var specialCharacterEL = (document.getElementById("#AllowSymbols").checked)
+  var includeSpecialCharacters = specialCharacterEL.checked;
+  var lowercaseLettersEl = (document.getElementById("#AllowLowercaseLetters").checked)
+  
   let pass = '';
   let str = numbers + symbols + lowercaseLetters + uppercaseLetters;
   for (let i = 1; i <= 8; i++) {
